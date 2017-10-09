@@ -1,0 +1,15 @@
+<form (submit)="onSubmit()" #commentForm="ngForm">
+    <div>
+        <label for="name">Name</label>
+        <!-- @ngModel creates a link between form input and associated property on the component -->
+        <!-- [()] used for 2-way data binding -->
+        <input type="text" name="name" [(ngModel)]="name" />
+    </div>
+    <div>
+        <label for="comment">Comment</label>
+        <textarea name="comment" [(ngModel)]="comment"></textarea>
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
